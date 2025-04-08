@@ -18,3 +18,6 @@ git add .
 git commit -m "texto"
 git push origin main
 ```
+> Así es como queda el index de mi proyecto DOM
+
+![Index](images/index.png)
