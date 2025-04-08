@@ -1,8 +1,4 @@
 let btnMostrar = document.getElementById("btnMostrar");
-btnMostrar.addEventListener("click", function (event) {
-  event.preventDefault(); // No hagas lo que haces por defecto.
-  console.log("boton btnModificar presionado");
-});
 
 let encabezado1 = document.getElementById("encabezado1");
 encabezado1.innerText = "Ejercicio DOM";
@@ -25,3 +21,27 @@ console.log("otroElemento: ", otroElemento);
 
 let otrosElementos = document.querySelectorAll("ul>li");
 console.log(otrosElementos.length);
+
+btnMostrar.addEventListener("click", function (event) {
+  event.preventDefault(); // No hagas lo que haces por defecto.
+
+  let element = document.createElement("li");
+  element.innerText = "Another item"; // <li>Anothe item</li>
+  element.classList.add("list-group-item");
+
+  let element2 = element.cloneNode(true);
+
+  // SOLO PUEDE EXISTIR EN UN LUGAR A LA VEZ, SIEMPRE TOMA COMO REFERENCIA LA ÚLTIMA LÍNEA LEÍDA
+
+  // before: Inserta el elemento antes de la lista
+  listas.item(0).before(element);
+
+  // prepend: Inserta el elemento al principio de la lista
+  listas.item(0).prepend(element2);
+
+  // append: Inserta el elemento al final de la lista
+  listas.item(0).append(element);
+
+  // after: Inserta el elemento después de la lista
+  listas.item(0).after(element2);
+});
