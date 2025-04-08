@@ -20,4 +20,4 @@ git push origin main
 ```
 > Así es como queda el index de mi proyecto DOM
 
-![Index](images/index.png)
+![Index](https://github.com/DanRodgz/EjercicioDOM/blob/main/images/index.png)
